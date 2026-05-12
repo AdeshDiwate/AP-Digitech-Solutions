@@ -10,8 +10,15 @@
 !.yarn/releases
 !.yarn/versions
 
+# package manager caches
+.npm
+.pnpm-store
+.yarn-integrity
+
 # testing
 /coverage
+*.lcov
+.nyc_output
 
 # next.js
 /.next/
@@ -19,10 +26,14 @@
 
 # production
 /build
+dist
+.output
 
 # misc
 .DS_Store
 *.pem
+.eslintcache
+.stylelintcache
 
 # debug
 npm-debug.log*
@@ -30,8 +41,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (can opt-in for committing an example file if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +51,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+!.yarn/sdks
+!.yarn/versions
+
+# Vite files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.vite/

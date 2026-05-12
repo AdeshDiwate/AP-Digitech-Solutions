@@ -101,6 +101,7 @@ This makes the site easy to deploy and maintain for small-to-medium content upda
 
 - Node.js 18 or later recommended
 - npm
+- Copy `.env.example` to `.env.local` if the project introduces environment-specific settings later; `.env*` files are gitignored and `.env.example` remains safe to commit.
 
 ### Install dependencies
 
@@ -148,3 +149,4 @@ This project is suitable for deployment on platforms that support Next.js applic
 ## Ownership
 
 This repository represents the Raveblue website codebase and should be maintained with attention to visual consistency, responsive behavior, and content accuracy across homepage, portfolio, and blog experiences.
+
