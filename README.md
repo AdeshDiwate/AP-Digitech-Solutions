@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raveblue
 
-## Getting Started
+Raveblue is a marketing and portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. The project presents the company brand, service positioning, portfolio work, long-form case study content, and editorial/blog content in a polished single-application frontend.
 
-First, run the development server:
+## Overview
+
+This repository contains the public-facing website for Raveblue. The application is structured around the Next.js App Router and combines reusable UI primitives with section-based page composition.
+
+Primary goals of the project:
+
+- Present the Raveblue brand and value proposition.
+- Showcase services and featured work.
+- Publish thought-leadership content through a blog experience.
+- Highlight a detailed portfolio case study for the MAA Recipe App project.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- React Icons
+- Sonner
+- shadcn/ui configuration with Aceternity-style UI components
+
+## Key Routes
+
+- `/` - Home page with hero, about, trusted-by, services, testimonials, blogs, contact, and footer sections
+- `/Blog` - Blog listing page powered by shared blog data
+- `/Portfolio` - Portfolio overview page with carousel-based project presentation
+- `/Portfolio/MAA-Recipe-App` - Detailed portfolio case study page
+
+## Project Structure
+
+```text
+app/
+  layout.tsx
+  page.tsx
+  Blog/page.tsx
+  Portfolio/page.tsx
+  Portfolio/MAA-Recipe-App/page.tsx
+components/
+  navbar.tsx
+  ui/
+  *-demo.tsx
+sections/
+  hero.tsx
+  about-us.tsx
+  trusted-by.tsx
+  services.tsx
+  testimonials.tsx
+  blogs.tsx
+  contact.tsx
+  footer.tsx
+public/
+  blogs/
+  clients/
+  portfolio/
+lib/
+  utils.ts
+hooks/
+  use-outside-click.tsx
+```
+
+## Application Architecture
+
+The codebase follows a simple frontend-focused structure:
+
+- `app/` contains route entry points and layout configuration.
+- `sections/` contains homepage-specific content blocks.
+- `components/` contains reusable UI components, navigation, and animated building blocks.
+- `components/ui/` contains lower-level interaction and presentation primitives.
+- `public/` stores static assets for blogs, clients, and portfolio content.
+- `lib/` stores shared utility logic.
+- `hooks/` stores reusable React hooks.
+
+## Content Model
+
+The application currently uses local, code-defined content rather than an external CMS or API.
+
+- Blog content is defined in `sections/blogs.tsx`.
+- Portfolio overview content is defined in `app/Portfolio/page.tsx`.
+- The MAA Recipe App case study is authored directly in `app/Portfolio/MAA-Recipe-App/page.tsx`.
+- Homepage sections are assembled in `app/page.tsx`.
+
+This makes the site easy to deploy and maintain for small-to-medium content updates, but content changes currently require code edits and redeployment.
+
+## Design and UI Notes
+
+- The site uses a section-driven landing-page layout for the homepage.
+- Motion and interaction effects are implemented with Framer Motion and custom UI components.
+- Tailwind CSS is used for layout, spacing, color, and typography.
+- The project includes shadcn configuration in `components.json`.
+- Remote images are currently allowed from `images.unsplash.com` through `next.config.mjs`.
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 18 or later recommended
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start the local development server
+- `npm run build` - Create a production build
+- `npm run start` - Run the production build locally
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is suitable for deployment on platforms that support Next.js applications, including Vercel. Before deploying, confirm:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Environment and Node.js versions are aligned with the target platform.
+- External image domains remain correctly configured in `next.config.mjs`.
+- All static assets under `public/` are committed and available.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Maintenance Guidelines
 
-## Deploy on Vercel
+- Keep route naming consistent when adding new pages.
+- Prefer storing reusable UI patterns in `components/` instead of duplicating them in route files.
+- Keep homepage content inside `sections/` for maintainability.
+- If the volume of blog or portfolio content grows, consider moving content into a CMS, MDX, or structured data files.
+- Review image optimization settings whenever new external asset sources are introduced.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Known Characteristics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The application is currently frontend-only and does not include a backend service layer.
+- Content is mostly static and maintained directly in the codebase.
+- Some routes use capitalized folder names such as `Blog` and `Portfolio`, so links and deployment behavior should be kept consistent with the current structure.
+
+## Ownership
+
+This repository represents the Raveblue website codebase and should be maintained with attention to visual consistency, responsive behavior, and content accuracy across homepage, portfolio, and blog experiences.
