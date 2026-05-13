@@ -4,36 +4,41 @@ import { useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { toast } from "sonner";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const MAX_CHARS = 600;
+const MIN_MESSAGE = 10;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const initialFormState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phoneNumber: "",
+  message: "",
+};
+
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const MAX_CHARS = 600;
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validation
+    if (isSubmitting) return;
+
     if (!formData.firstName.trim()) {
       toast.error("First name is required");
       return;
     }
-    
+
     if (!formData.email.trim()) {
       toast.error("Email address is required");
       return;
     }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+
+    if (!EMAIL_REGEX.test(formData.email.trim())) {
       toast.error("Please enter a valid email address");
       return;
     }
@@ -43,22 +48,57 @@ export default function Contact() {
       return;
     }
 
-    if (!formData.message.trim()) {
+    const trimmedMessage = formData.message.trim();
+    if (!trimmedMessage) {
       toast.error("Message is required");
       return;
     }
 
-    // Success
-    toast.success("Message sent successfully! We'll get back to you soon.");
-    
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
-    });
+    if (trimmedMessage.length < MIN_MESSAGE) {
+      toast.error(`Message must be at least ${MIN_MESSAGE} characters`);
+      return;
+    }
+
+    const fullName = `${formData.firstName.trim()} ${formData.lastName.trim()}`.trim();
+
+    setIsSubmitting(true);
+    const loadingToast = toast.loading("Sending your message...");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fullName,
+          email: formData.email.trim(),
+          phone: formData.phoneNumber.trim(),
+          message: trimmedMessage,
+        }),
+      });
+
+      const result = (await response
+        .json()
+        .catch(() => ({}))) as { success?: boolean; error?: string };
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.error ?? "We couldn't send your message. Please try again.",
+        );
+      }
+
+      toast.success("Message sent successfully! We'll get back to you soon.", {
+        id: loadingToast,
+      });
+      setFormData(initialFormState);
+    } catch (err) {
+      const message =
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.";
+      toast.error(message, { id: loadingToast });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -106,7 +146,7 @@ export default function Contact() {
                       Visit us
                     </h3>
                     <div className="mt-3">
-                      <a 
+                      <a
                         href="https://www.google.com/maps/search/?api=1&query=Gera's+Imperium+Rise+Hinjewadi+Phase+II+Pune+411057"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -145,7 +185,8 @@ export default function Contact() {
 
             {/* Right Column: Contact Form */}
             <div className="flex flex-col">
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                <fieldset disabled={isSubmitting} className="space-y-4 disabled:opacity-90">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-1">
                     <label htmlFor="firstName" className="text-sm font-medium text-slate-900">First Name</label>
@@ -153,9 +194,12 @@ export default function Contact() {
                       type="text"
                       id="firstName"
                       placeholder="John"
+                      required
+                      maxLength={60}
+                      autoComplete="given-name"
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
                     />
                   </div>
                   <div className="space-y-1">
@@ -164,9 +208,11 @@ export default function Contact() {
                       type="text"
                       id="lastName"
                       placeholder="Doe"
+                      maxLength={60}
+                      autoComplete="family-name"
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -177,9 +223,12 @@ export default function Contact() {
                     type="email"
                     id="email"
                     placeholder="hello@example.com"
+                    required
+                    maxLength={254}
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -190,6 +239,7 @@ export default function Contact() {
                       defaultCountry="in"
                       value={formData.phoneNumber}
                       onChange={(phone) => setFormData({ ...formData, phoneNumber: phone })}
+                      disabled={isSubmitting}
                       className="w-full"
                       inputClassName="!w-full !h-[42px] !rounded-r-xl !border-y !border-r !border-slate-200 !bg-slate-50 !px-4 !py-2.5 !text-sm focus:!border-blue-500 focus:!outline-none focus:!ring-1 focus:!ring-blue-500 !transition-all"
                       countrySelectorStyleProps={{
@@ -205,11 +255,13 @@ export default function Contact() {
                     <textarea
                       id="message"
                       rows={4}
+                      required
+                      minLength={MIN_MESSAGE}
                       maxLength={MAX_CHARS}
                       placeholder="Tell us about your project, goals, or requirements..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 pb-8 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none transition-all duration-200"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 pb-8 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none transition-all duration-200 disabled:cursor-not-allowed"
                     />
                     <div className={cn(
                       "absolute bottom-2.5 right-3 text-[10px] font-medium transition-colors duration-200 pointer-events-none",
@@ -222,10 +274,20 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-blue-500 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-blue-600"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-blue-600 disabled:cursor-not-allowed disabled:bg-blue-400"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
+                </fieldset>
               </form>
             </div>
           </div>
