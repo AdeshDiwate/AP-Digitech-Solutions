@@ -166,7 +166,7 @@ export default function Blogs() {
           ))}
         </div>
 
-        {/* View All Blogs Button at the bottom. */}
+        {/* View All Blogs Button at the bottom */}
         <div className="mt-12 flex justify-center">
           <Link
             href="/Blog"
