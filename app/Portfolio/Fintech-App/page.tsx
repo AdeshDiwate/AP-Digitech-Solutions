@@ -45,7 +45,7 @@ const WeCareFinservApp = () => {
                 <img
                   src="/portfolio/fintech/hero.png"
                   alt="WeCare Finserv Hero"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-right"
                 />
               </motion.div>
             </motion.div>
