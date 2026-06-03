@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export default function PortfolioPage() {
   const cards = portfolioData.map((card, index) => (
-    <Link 
-      key={card.src} 
-      href={card.link || "#"} 
+    <Link
+      key={card.src}
+      href={card.link || "#"}
       className="block transition-transform hover:scale-[1.02] active:scale-[0.98]"
     >
       <Card card={card} index={index} />
@@ -111,15 +111,15 @@ const portfolioData = [
     ),
   },
   {
-    category: "FinTech",
-    title: "Global Wealth Management Platform",
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    link: "#",
+    category: "UX Case Study",
+    title: "WeCare Finserv",
+    src: "/portfolio/fintech/hero.png",
+    link: "/Portfolio/Fintech-App",
     content: (
       <DummyContent
-        title="Global Wealth Platform"
-        description="A comprehensive wealth management system designed for institutional investors, featuring real-time data visualization, automated portfolio rebalancing, and complex risk assessment tools."
-        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=3540&auto=format&fit=crop"
+        title="WeCare Finserv"
+        description="Simplifying financial management, budgeting, and investment tracking to make wealth creation accessible, intuitive, and secure for retail users."
+        image="/portfolio/fintech/hero.png"
       />
     ),
   },

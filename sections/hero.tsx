@@ -5,6 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const tlRef = useRef<gsap.core.Timeline | null>(null);
@@ -94,15 +95,16 @@ export default function Hero() {
 
             <Link
               href="/#contact"
-              className="hero-btn mt-10 rounded-full bg-[#2563eb] px-10 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_18px_36px_rgba(37,99,235,0.22)] md:text-lg"
+              className="hero-btn group mt-10 inline-flex items-center gap-3 rounded-full bg-[#2563eb] py-3 pl-8 pr-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(37,99,235,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_18px_36px_rgba(37,99,235,0.22)] md:py-3.5 md:pl-10 md:pr-5 md:text-lg"
             >
-              Get Started
+              <span>Get Started</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#2563eb] group-hover:translate-x-0.5 md:h-9 md:w-9">
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 md:h-5 md:w-5" />
+              </span>
             </Link>
           </div>
         </BackgroundBeamsWithCollision>
       </div>
-
-      {/* Bottom gradient blend into next section */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f8fafc] to-transparent"
         aria-hidden="true"

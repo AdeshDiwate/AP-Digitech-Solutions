@@ -43,7 +43,7 @@ const MAARecipeApp = () => {
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="w-full h-full"
+                className="w-full h-[calc(100%+20px)]"
               >
                 <img
                   src="/portfolio/maa-recipe/hero.png"
@@ -468,7 +468,7 @@ const MAARecipeApp = () => {
         <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">User Persona</h2>
         <div className="w-12 h-1 bg-blue-600 mx-auto mb-12 rounded-full" />
         <p className="text-slate-500 mb-16 text-center max-w-2xl mx-auto font-light">
-          Using data from user research, I created user personas representing different user groups. These personas guide the project in user-centered design.
+          Using data from user research, We created user personas representing different user groups. These personas guide the project in user-centered design.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
