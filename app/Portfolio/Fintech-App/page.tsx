@@ -70,8 +70,8 @@ const WeCareFinservApp = () => {
               <div className="space-y-4 pt-4 border-t border-slate-100">
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Project URL</p>
-                  <a href="https://raveblue.in/portfolio/Fintech-App" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 font-medium break-all flex items-center gap-1 hover:underline">
-                    https://raveblue.in/portfolio/Fintech-App <FiExternalLink />
+                  <a href="https://raveblue.in/Portfolio/Fintech-App" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 font-medium break-all flex items-center gap-1 hover:underline">
+                    https://raveblue.in/Portfolio/Fintech-App <FiExternalLink />
                   </a>
                 </div>
                 <div>
