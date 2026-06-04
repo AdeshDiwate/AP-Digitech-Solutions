@@ -24,12 +24,12 @@ const testimonials = [
     featured: true,
   },
   {
-    name: "Gururaja Kulkarni",
+    name: "Alex Carter",
     role: "Client",
     quote:
-      "Raveblue is far more than a service provider; they are a growth powerhouse. They took our vision and engineered a custom software solution that didn't just function it dominated our market. Their speed and precision are unmatched.",
+      "Raveblue brought clarity, structure, and technical excellence to a project that initially felt overwhelming. Their team delivered a scalable solution tailored to our needs, helping us streamline operations, improve efficiency, and focus on growth with confidence.",
     accent: "from-slate-100 to-white",
-    initials: "GK",
+    initials: "AC",
     featured: false,
   },
 ];

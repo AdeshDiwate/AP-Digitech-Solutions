@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ArrowUpRight, ArrowRight, Mail } from "lucide-react";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import WorldMap from "@/components/ui/world-map";
@@ -48,6 +48,27 @@ const mapDots = [
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const watermarkRef = useRef<HTMLDivElement>(null);
+  const watermarkTextRef = useRef<HTMLHeadingElement>(null);
+
+  // Auto-scale the watermark text to perfectly fill its container width
+  useEffect(() => {
+    const container = watermarkRef.current;
+    const text = watermarkTextRef.current;
+    if (!container || !text) return;
+
+    const fit = () => {
+      // Reset to a known baseline first
+      text.style.fontSize = "100px";
+      const scale = container.clientWidth / text.scrollWidth;
+      text.style.fontSize = `${100 * scale}px`;
+    };
+
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(container);
+    return () => ro.disconnect();
+  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,9 +92,9 @@ export default function Footer() {
         <div className="px-6 md:px-16 lg:px-24">
           <div className="max-w-7xl mx-auto">
             {/* 4-column grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 pt-14 pb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 pt-14 pb-4">
               {/* Brand column */}
-              <div className="space-y-4">
+              <div className="col-span-2 sm:col-span-1 space-y-4">
                 <h2 className="text-xl font-bold tracking-wide text-white">
                   Rave<span className="text-blue-500">blue</span>
                 </h2>
@@ -123,7 +144,7 @@ export default function Footer() {
               </div>
 
               {/* Newsletter column */}
-              <div className="space-y-4">
+              <div className="col-span-2 sm:col-span-1 space-y-4">
                 <h3 className="text-sm font-semibold text-white tracking-wide">Newsletter</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   Receive product updates news, exclusive discounts and early access.
@@ -198,10 +219,13 @@ export default function Footer() {
           </div>
         </div>
         {/* ── Giant watermark text (bottom-left) ── */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none overflow-hidden z-20">
+        <div
+          ref={watermarkRef}
+          className="absolute bottom-0 left-0 right-0 pointer-events-none select-none overflow-hidden z-20"
+        >
           <h2
-            className="font-black leading-none tracking-tight text-white/[0.06] -mb-[1vw] pl-4 md:pl-10 lg:pl-16 whitespace-nowrap"
-            style={{ fontSize: "clamp(5rem, 11vw, 16rem)" }}
+            ref={watermarkTextRef}
+            className="font-black leading-none tracking-tight text-white/[0.06] -mb-[1vw] whitespace-nowrap block"
           >
             RAVEBLUE
           </h2>

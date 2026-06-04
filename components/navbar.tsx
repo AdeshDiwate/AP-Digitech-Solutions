@@ -87,8 +87,12 @@ export default function Navbar() {
 const Logo = () => (
   <Link
     href="/"
-    className="relative z-20 flex items-center text-lg font-semibold tracking-[0.02em] text-slate-900 dark:text-white"
+    className="relative z-20 flex items-center"
   >
-    Rave<span className="text-blue-500">blue</span>
+    <img
+      src="/raveblue-logo.png"
+      alt="Raveblue"
+      className="h-8 sm:h-9 w-auto"
+    />
   </Link>
 );
