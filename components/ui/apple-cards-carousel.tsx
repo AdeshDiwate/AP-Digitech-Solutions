@@ -25,6 +25,7 @@ type CardData = {
   title: string;
   category: string;
   content: React.ReactNode;
+  imageClassName?: string;
 };
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
@@ -221,7 +222,7 @@ export const Card = ({
         src={card.src}
         alt={card.title}
         fill
-        className="absolute inset-0 z-10 object-cover"
+        className={cn("absolute inset-0 z-10 object-cover", card.imageClassName)}
       />
     </div>
   );

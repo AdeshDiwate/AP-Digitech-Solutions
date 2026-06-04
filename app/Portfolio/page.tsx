@@ -111,7 +111,7 @@ const portfolioData = [
     ),
   },
   {
-    category: "UX Case Study",
+    category: "Fintech",
     title: "WeCare Finserv",
     src: "/portfolio/fintech/hero.png",
     link: "/Portfolio/Fintech-App",
@@ -125,14 +125,15 @@ const portfolioData = [
   },
   {
     category: "E-commerce",
-    title: "Artisanal Marketplace Experience",
-    src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=3540&auto=format&fit=crop",
-    link: "#",
+    title: "Shree Coconut App",
+    src: "/portfolio/shree-coconut/card%20corrousal.jpg",
+    link: "/Portfolio/Shree-Coconut-App",
+    imageClassName: "object-right",
     content: (
       <DummyContent
-        title="Artisanal Marketplace"
-        description="A high-end marketplace connecting global artisans with conscious consumers, built with a focus on immersive storytelling, high-performance image delivery, and a seamless multi-currency checkout."
-        image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=3540&auto=format&fit=crop"
+        title="Shree Coconut App"
+        description="A hyper-local Android ordering application built to streamline the coconut supply chain — connecting local vendors with everyday consumers through a minimal, visual-first ordering experience."
+        image="/portfolio/shree-coconut/card%20corrousal.jpg"
       />
     ),
   },
