@@ -99,41 +99,40 @@ const DummyContent = ({ title, description, image }: { title: string, descriptio
 const portfolioData = [
   {
     category: "UX Case Study",
-    title: "MAA Recipe App",
-    src: "/portfolio/maa-recipe/hero.png",
+    title: "Food",
+    src: "/portfolio/maa-recipe/card.png",
     link: "/Portfolio/MAA-Recipe-App",
     content: (
       <DummyContent
-        title="MAA Recipe App"
+        title="Food"
         description="Designing a seamless and intuitive recipe experience for modern home cooks, focusing on accessibility and minimal friction."
-        image="/portfolio/maa-recipe/hero.png"
+        image="/portfolio/maa-recipe/card.png"
       />
     ),
   },
   {
     category: "Fintech",
-    title: "WeCare Finserv",
-    src: "/portfolio/fintech/hero.png",
+    title: "Finance",
+    src: "/portfolio/fintech/card.png",
     link: "/Portfolio/Fintech-App",
     content: (
       <DummyContent
-        title="WeCare Finserv"
+        title="Finance"
         description="Simplifying financial management, budgeting, and investment tracking to make wealth creation accessible, intuitive, and secure for retail users."
-        image="/portfolio/fintech/hero.png"
+        image="/portfolio/fintech/card.png"
       />
     ),
   },
   {
     category: "E-commerce",
-    title: "Shree Coconut App",
-    src: "/portfolio/shree-coconut/card%20corrousal.jpg",
+    title: "Beverages",
+    src: "/portfolio/shree-coconut/card.png",
     link: "/Portfolio/Shree-Coconut-App",
-    imageClassName: "object-right",
     content: (
       <DummyContent
-        title="Shree Coconut App"
+        title="Beverages"
         description="A hyper-local Android ordering application built to streamline the coconut supply chain — connecting local vendors with everyday consumers through a minimal, visual-first ordering experience."
-        image="/portfolio/shree-coconut/card%20corrousal.jpg"
+        image="/portfolio/shree-coconut/card.png"
       />
     ),
   },

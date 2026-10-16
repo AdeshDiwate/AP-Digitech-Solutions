@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WeCare Finserv — Case Study",
+  title: "Finance — Case Study",
   description:
     "A case study by AP Digitech Solutions: designing WeCare Finserv, a modern wealth management platform that simplifies financial tracking, budgeting, and investment goals.",
   alternates: { canonical: "/Portfolio/Fintech-App" },
