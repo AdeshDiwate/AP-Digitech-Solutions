@@ -57,10 +57,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.jpg", type: "image/jpeg", sizes: "any" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    shortcut: "/favicon.jpg",
+    apple: "/favicon.jpg",
   },
   openGraph: {
     type: "website",
