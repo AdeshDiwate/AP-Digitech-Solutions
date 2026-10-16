@@ -3,19 +3,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Selected work from Raveblue — custom software, AI-powered platforms, design systems, and digital products crafted for modern businesses.",
+    "Selected work from AP Digitech Solutions — custom software, AI-powered platforms, design systems, and digital products crafted for modern businesses.",
   alternates: { canonical: "/Portfolio" },
   openGraph: {
-    title: "Portfolio | Raveblue",
+    title: "Portfolio | AP Digitech Solutions",
     description:
-      "A showcase of impactful digital solutions engineered by Raveblue, where technical excellence meets creative vision.",
+      "A showcase of impactful digital solutions engineered by AP Digitech Solutions, where technical excellence meets creative vision.",
     url: "/Portfolio",
     type: "website",
   },
   twitter: {
-    title: "Portfolio | Raveblue",
+    title: "Portfolio | AP Digitech Solutions",
     description:
-      "A showcase of impactful digital solutions engineered by Raveblue.",
+      "A showcase of impactful digital solutions engineered by AP Digitech Solutions.",
   },
 };
 

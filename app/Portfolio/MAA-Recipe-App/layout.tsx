@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "MAA Recipe App — UX Case Study",
   description:
-    "A UX case study by Raveblue: designing a hands-free, multilingual cooking experience for modern home cooks — from research and personas to a high-fidelity prototype.",
+    "A UX case study by AP Digitech Solutions: designing a hands-free, multilingual cooking experience for modern home cooks — from research and personas to a high-fidelity prototype.",
   alternates: { canonical: "/Portfolio/MAA-Recipe-App" },
   openGraph: {
-    title: "MAA Recipe App — UX Case Study | Raveblue",
+    title: "MAA Recipe App — UX Case Study | AP Digitech Solutions",
     description:
-      "Designing a seamless, voice-driven cooking experience — research, design system, and prototype by Raveblue.",
+      "Designing a seamless, voice-driven cooking experience — research, design system, and prototype by AP Digitech Solutions.",
     url: "/Portfolio/MAA-Recipe-App",
     type: "article",
     images: [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "MAA Recipe App — UX Case Study | Raveblue",
+    title: "MAA Recipe App — UX Case Study | AP Digitech Solutions",
     description:
-      "Designing a seamless, voice-driven cooking experience — research, design system, and prototype by Raveblue.",
+      "Designing a seamless, voice-driven cooking experience — research, design system, and prototype by AP Digitech Solutions.",
     images: ["/portfolio/maa-recipe/hero.png"],
   },
 };

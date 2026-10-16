@@ -1,14 +1,14 @@
-# Raveblue
+# AP Digitech Solutions
 
-Raveblue is a marketing and portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. The project presents the company brand, service positioning, portfolio work, long-form case study content, and editorial/blog content in a polished single-application frontend.
+AP Digitech Solutions is a marketing and portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. The project presents the company brand, service positioning, portfolio work, long-form case study content, and editorial/blog content in a polished single-application frontend.
 
 ## Overview
 
-This repository contains the public-facing website for Raveblue. The application is structured around the Next.js App Router and combines reusable UI primitives with section-based page composition.
+This repository contains the public-facing website for AP Digitech Solutions. The application is structured around the Next.js App Router and combines reusable UI primitives with section-based page composition.
 
 Primary goals of the project:
 
-- Present the Raveblue brand and value proposition.
+- Present the AP Digitech Solutions brand and value proposition.
 - Showcase services and featured work.
 - Publish thought-leadership content through a blog experience.
 - Highlight a detailed portfolio case study for the MAA Recipe App project.
@@ -148,5 +148,5 @@ This project is suitable for deployment on platforms that support Next.js applic
 
 ## Ownership
 
-This repository represents the Raveblue website codebase and should be maintained with attention to visual consistency, responsive behavior, and content accuracy across homepage, portfolio, and blog experiences.
+This repository represents the AP Digitech Solutions website codebase and should be maintained with attention to visual consistency, responsive behavior, and content accuracy across homepage, portfolio, and blog experiences.
 

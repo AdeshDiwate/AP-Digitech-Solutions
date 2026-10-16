@@ -74,12 +74,12 @@ const MAARecipeApp = () => {
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Project URL</p>
                   <a href="#" className="text-sm text-blue-600 font-medium break-all flex items-center gap-1 hover:underline">
-                    https://raveblue.in/portfolio/maa-recipe-app-portfolio/ <FiExternalLink />
+                    https://apdigitechsolutions.in/portfolio/maa-recipe-app-portfolio/ <FiExternalLink />
                   </a>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Client</p>
-                  <p className="text-sm text-slate-700 font-medium">Piyush Ingale</p>
+                  <p className="text-sm text-slate-700 font-medium">Aman Gupta</p>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Release Date</p>
@@ -423,9 +423,9 @@ const MAARecipeApp = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm overflow-hidden"
               >
-                <img 
-                  src={chart.src} 
-                  alt={chart.alt} 
+                <img
+                  src={chart.src}
+                  alt={chart.alt}
                   className="w-full h-auto rounded-xl"
                 />
               </motion.div>
@@ -447,9 +447,9 @@ const MAARecipeApp = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm overflow-hidden"
               >
-                <img 
-                  src={chart.src} 
-                  alt={chart.alt} 
+                <img
+                  src={chart.src}
+                  alt={chart.alt}
                   className="w-full h-auto rounded-xl"
                 />
               </motion.div>
@@ -477,9 +477,9 @@ const MAARecipeApp = () => {
             whileHover={{ scale: 1.01 }}
             className="bg-white rounded-3xl border border-slate-100 p-2 shadow-sm overflow-hidden"
           >
-            <img 
-              src="/portfolio/maa-recipe/persona/persona-1.png" 
-              alt="User Persona: Awantika Sharma" 
+            <img
+              src="/portfolio/maa-recipe/persona/persona-1.png"
+              alt="User Persona: Awantika Sharma"
               className="w-full h-auto rounded-2xl"
             />
           </motion.div>
@@ -488,9 +488,9 @@ const MAARecipeApp = () => {
             whileHover={{ scale: 1.01 }}
             className="bg-white rounded-3xl border border-slate-100 p-2 shadow-sm overflow-hidden"
           >
-            <img 
-              src="/portfolio/maa-recipe/persona/persona-2.png" 
-              alt="User Persona: Gaurav Rathee" 
+            <img
+              src="/portfolio/maa-recipe/persona/persona-2.png"
+              alt="User Persona: Gaurav Rathee"
               className="w-full h-auto rounded-2xl"
             />
           </motion.div>
@@ -510,9 +510,9 @@ const MAARecipeApp = () => {
           Affinity mapping was done to categorise all the features under different sections which will further help in organising the information architecture.
         </p>
         <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 border border-slate-100 shadow-sm overflow-hidden">
-          <img 
-            src="/portfolio/maa-recipe/affinity-map.png" 
-            alt="Affinity Map" 
+          <img
+            src="/portfolio/maa-recipe/affinity-map.png"
+            alt="Affinity Map"
             className="w-full h-auto rounded-2xl"
           />
         </div>
@@ -544,9 +544,9 @@ const MAARecipeApp = () => {
               transition={{ delay: i * 0.1 }}
               className="bg-white rounded-3xl p-4 md:p-8 border border-slate-100 shadow-sm overflow-hidden"
             >
-              <img 
-                src={flow.src} 
-                alt={flow.alt} 
+              <img
+                src={flow.src}
+                alt={flow.alt}
                 className="w-full h-auto"
               />
             </motion.div>
@@ -567,9 +567,9 @@ const MAARecipeApp = () => {
           We sketched the low fidelity wireframes in invision studio.
         </p>
         <div className="max-w-5xl mx-auto bg-white rounded-3xl p-8 border border-slate-100 shadow-sm overflow-hidden">
-          <img 
-            src="/portfolio/maa-recipe/wireframes.png" 
-            alt="Low-Fidelity Wireframes" 
+          <img
+            src="/portfolio/maa-recipe/wireframes.png"
+            alt="Low-Fidelity Wireframes"
             className="w-full h-auto rounded-xl"
           />
         </div>
@@ -580,9 +580,9 @@ const MAARecipeApp = () => {
           After making changes in low-fidelity wireframes we moved on to designing this high fidelity wireframes.
         </p>
         <div className="max-w-5xl mx-auto bg-white rounded-3xl p-8 border border-slate-100 shadow-sm overflow-hidden">
-          <img 
-            src="/portfolio/maa-recipe/hi-fi-wireframes.png" 
-            alt="High-Fidelity Wireframes" 
+          <img
+            src="/portfolio/maa-recipe/hi-fi-wireframes.png"
+            alt="High-Fidelity Wireframes"
             className="w-full h-auto rounded-xl"
           />
         </div>
@@ -601,16 +601,16 @@ const MAARecipeApp = () => {
           Mood board help in deciding the right color pallate for user interface.
         </p>
         <div className="max-w-5xl mx-auto bg-white rounded-3xl p-8 border border-slate-100 shadow-sm overflow-hidden">
-          <img 
-            src="/portfolio/maa-recipe/moodboard.png" 
-            alt="Mood Board" 
+          <img
+            src="/portfolio/maa-recipe/moodboard.png"
+            alt="Mood Board"
             className="w-full h-auto rounded-xl"
           />
         </div>
       </motion.section>
 
       {/* 13. STYLE GUIDE - REFINED */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -623,11 +623,11 @@ const MAARecipeApp = () => {
             Defining the visual language and core components to ensure design consistency across the platform.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-4 md:p-12 border border-slate-100 shadow-sm overflow-hidden">
-          <img 
-            src="/portfolio/maa-recipe/style-guide-full.png" 
-            alt="MAA Recipe Design System - Style Guide" 
+          <img
+            src="/portfolio/maa-recipe/style-guide-full.png"
+            alt="MAA Recipe Design System - Style Guide"
             className="w-full h-auto rounded-2xl"
           />
         </div>
@@ -667,9 +667,9 @@ const MAARecipeApp = () => {
               className="relative group"
             >
               <div className="absolute inset-0 bg-blue-600/5 rounded-[3rem] blur-2xl group-hover:bg-blue-600/10 transition-colors" />
-              <img 
-                src={screen.src} 
-                alt={screen.alt} 
+              <img
+                src={screen.src}
+                alt={screen.alt}
                 className="relative w-full h-auto drop-shadow-2xl rounded-[2.5rem]"
               />
             </motion.div>

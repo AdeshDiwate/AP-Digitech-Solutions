@@ -8,12 +8,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const clients = [
-  { name: "Soconut Shree", logo: "/clients/soconut-shree.jpg" },
-  { name: "Foxheart", logo: "/clients/foxheart.png" },
-  { name: "ICM", logo: "/clients/icm.jpg" },
-  { name: "GreenCircle", logo: "/clients/greencircle.png" },
-  { name: "WE Shield", logo: "/clients/we-shield.png" },
-  { name: "Bloom", logo: "/clients/bloom.png" },
+  { name: "Atlassian", logo: "/clients/atlassian.svg" },
+  { name: "Accenture", logo: "/clients/accenture.svg" },
+  { name: "Microsoft", logo: "/clients/microsoft.svg" },
+  { name: "Oracle", logo: "/clients/oracle.svg" },
+  { name: "OpenAI", logo: "/clients/openai.svg" },
 ];
 
 // Duplicate for seamless infinite scroll

@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "WeCare Finserv — Case Study",
   description:
-    "A case study by Raveblue: designing WeCare Finserv, a modern wealth management platform that simplifies financial tracking, budgeting, and investment goals.",
+    "A case study by AP Digitech Solutions: designing WeCare Finserv, a modern wealth management platform that simplifies financial tracking, budgeting, and investment goals.",
   alternates: { canonical: "/Portfolio/Fintech-App" },
   openGraph: {
-    title: "WeCare Finserv — Case Study | Raveblue",
+    title: "WeCare Finserv — Case Study | AP Digitech Solutions",
     description:
       "Simplifying financial management, budgeting, and investment tracking — UX case study of WeCare Finserv.",
     url: "/Portfolio/Fintech-App",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "WeCare Finserv — Case Study | Raveblue",
+    title: "WeCare Finserv — Case Study | AP Digitech Solutions",
     description:
       "Simplifying financial management, budgeting, and investment tracking — UX case study of WeCare Finserv.",
     images: ["/portfolio/fintech/hero.png"],

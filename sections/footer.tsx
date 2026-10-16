@@ -96,7 +96,7 @@ export default function Footer() {
               {/* Brand column */}
               <div className="col-span-2 sm:col-span-1 space-y-4">
                 <h2 className="text-xl font-bold tracking-wide text-white">
-                  Rave<span className="text-blue-500">blue</span>
+                  AP Digitech <span className="text-blue-500">Solutions</span>
                 </h2>
                 <p className="text-sm text-gray-400 leading-relaxed max-w-[280px]">
                   We craft custom software, websites, and digital strategies that move the needle.
@@ -189,7 +189,7 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-between gap-6 pt-4 sm:flex-row sm:gap-4">
               <p className="text-[10px] sm:text-xs text-gray-500 text-center sm:text-left order-2 sm:order-1">
-                © {new Date().getFullYear()} Raveblue · All rights reserved
+                © {new Date().getFullYear()} AP Digitech Solutions · All rights reserved
               </p>
 
               <div className="flex items-center gap-3 order-1 sm:order-2">
@@ -197,7 +197,7 @@ export default function Footer() {
                 {[
                   { Icon: FaFacebookF, label: "Facebook", href: "#" },
                   { Icon: FaXTwitter, label: "Twitter/X", href: "#" },
-                  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/company/raveblue/" },
+                  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/company/apdigitechsolutions/" },
                   { Icon: FaInstagram, label: "Instagram", href: "#" },
                 ].map(({ Icon, label, href }) => (
                   <a
@@ -227,7 +227,7 @@ export default function Footer() {
             ref={watermarkTextRef}
             className="font-black leading-none tracking-tight text-white/[0.06] -mb-[1vw] whitespace-nowrap block"
           >
-            RAVEBLUE
+            AP Digitech Solutions
           </h2>
         </div>
       </div>

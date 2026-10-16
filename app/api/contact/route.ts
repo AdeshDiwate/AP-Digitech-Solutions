@@ -4,9 +4,9 @@ import { Resend } from "resend";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const TO_EMAIL = "admin@raveblue.in";
-const FROM_EMAIL = "Raveblue Contact <onboarding@resend.dev>";
-const SUBJECT = "New Contact Form Submission - Raveblue";
+const TO_EMAIL = "admin@apdigitechsolutions.in";
+const FROM_EMAIL = "AP Digitech Solutions Contact <onboarding@resend.dev>";
+const SUBJECT = "New Contact Form Submission - AP Digitech Solutions";
 
 const MAX_NAME = 120;
 const MAX_EMAIL = 254;
@@ -84,7 +84,7 @@ function buildHtml(data: ContactPayload, submittedAt: string): string {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:16px;border:1px solid #e2e8f0;overflow:hidden;">
       <tr>
         <td style="padding:24px 28px;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:#ffffff;">
-          <p style="margin:0;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.85;">Raveblue</p>
+          <p style="margin:0;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.85;">AP Digitech Solutions</p>
           <h1 style="margin:6px 0 0;font-size:20px;font-weight:600;">New contact form submission</h1>
         </td>
       </tr>
@@ -103,7 +103,7 @@ function buildHtml(data: ContactPayload, submittedAt: string): string {
       </tr>
       <tr>
         <td style="padding:16px 28px 24px;color:#94a3b8;font-size:12px;">
-          Sent from the Raveblue contact form.
+          Sent from the AP Digitech Solutions contact form.
         </td>
       </tr>
     </table>
@@ -113,7 +113,7 @@ function buildHtml(data: ContactPayload, submittedAt: string): string {
 
 function buildText(data: ContactPayload, submittedAt: string): string {
   return [
-    "New contact form submission - Raveblue",
+    "New contact form submission - AP Digitech Solutions",
     "",
     `Name:      ${data.name}`,
     `Email:     ${data.email}`,

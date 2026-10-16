@@ -6,28 +6,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const testimonials = [
   {
-    name: "Gururaja Kulkarni",
+    name: "Neil Kartison",
     role: "Client",
     quote:
-      "Raveblue is far more than a service provider; they are a growth powerhouse. They took our vision and engineered a custom software solution that didn't just function it dominated our market. Their speed and precision are unmatched.",
+      "AP Digitech Solutions is far more than a service provider; they are a growth powerhouse. They took our vision and engineered a custom software solution that didn't just function it dominated our market. Their speed and precision are unmatched.",
     accent: "from-slate-100 to-white",
-    initials: "GK",
+    initials: "NK",
     featured: false,
   },
   {
-    name: "Mahadev Kadam",
+    name: "Siddharth Shedge",
     role: "Client",
     quote:
-      "The team at Raveblue doesn't play it safe, and that's exactly what we needed. They helped bring our brand online, blending stellar tech with modern design to deliver real-world ROI we never thought possible.",
+      "The team at AP Digitech Solutions doesn't play it safe, and that's exactly what we needed. They helped bring our brand online, blending stellar tech with modern design to deliver real-world ROI we never thought possible.",
     accent: "from-blue-50 via-white to-slate-50",
-    initials: "MK",
+    initials: "SS",
     featured: true,
   },
   {
     name: "Alex Carter",
     role: "Client",
     quote:
-      "Raveblue brought clarity, structure, and technical excellence to a project that initially felt overwhelming. Their team delivered a scalable solution tailored to our needs, helping us streamline operations, improve efficiency, and focus on growth with confidence.",
+      "AP Digitech Solutions brought clarity, structure, and technical excellence to a project that initially felt overwhelming. Their team delivered a scalable solution tailored to our needs, helping us streamline operations, improve efficiency, and focus on growth with confidence.",
     accent: "from-slate-100 to-white",
     initials: "AC",
     featured: false,

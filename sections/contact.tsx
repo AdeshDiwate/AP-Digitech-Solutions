@@ -152,8 +152,8 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="group/link block text-base font-medium leading-relaxed text-white transition-all duration-300 hover:text-white/90 sm:text-lg"
                       >
-                        Office No. 733, Gera's Imperium Rise, <br className="hidden sm:block" />
-                        Hinjewadi Phase II, Pune, 411057
+                        Office No. 123, XYZ Tower, <br className="hidden sm:block" />
+                        Camp, Pune, 411001
                         <span className="ml-2 inline-flex align-middle rounded-full bg-white/10 p-1 transition-all duration-300 group-hover/link:bg-white/20 group-hover/link:rotate-45">
                           <ArrowUpRight className="w-3.5 h-3.5 text-blue-50" />
                         </span>
@@ -166,7 +166,7 @@ export default function Contact() {
                       Chat to us
                     </h3>
                     <p className="mt-2 text-base font-medium text-white sm:text-lg">
-                      hr@raveblue.in
+                      hr@apdigitechsolutions.in
                     </p>
                   </div>
 
@@ -175,8 +175,8 @@ export default function Contact() {
                       Call us
                     </h3>
                     <p className="mt-2 text-base font-medium text-white sm:text-lg">
-                      (+91) 826-506-8879 <br />
-                      (+91) 866-861-9751
+                      (+91) 7420 936 338 <br />
+                      (+91) 9999 888 777
                     </p>
                   </div>
                 </div>
@@ -187,106 +187,106 @@ export default function Contact() {
             <div className="flex flex-col">
               <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <fieldset disabled={isSubmitting} className="space-y-4 disabled:opacity-90">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-1">
-                    <label htmlFor="firstName" className="text-sm font-medium text-slate-900">First Name</label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      placeholder="John"
-                      required
-                      maxLength={60}
-                      autoComplete="given-name"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label htmlFor="lastName" className="text-sm font-medium text-slate-900">Last Name</label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      placeholder="Doe"
-                      maxLength={60}
-                      autoComplete="family-name"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label htmlFor="email" className="text-sm font-medium text-slate-900">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="hello@example.com"
-                    required
-                    maxLength={254}
-                    autoComplete="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
-                  />
-                </div>
-
-                <div className="space-y-1">
-                  <label htmlFor="phoneNumber" className="text-sm font-medium text-slate-900">Phone Number</label>
-                  <div className="phone-input-wrapper">
-                    <PhoneInput
-                      defaultCountry="in"
-                      value={formData.phoneNumber}
-                      onChange={(phone) => setFormData({ ...formData, phoneNumber: phone })}
-                      disabled={isSubmitting}
-                      className="w-full"
-                      inputClassName="!w-full !h-[42px] !rounded-r-xl !border-y !border-r !border-slate-200 !bg-slate-50 !px-4 !py-2.5 !text-sm focus:!border-blue-500 focus:!outline-none focus:!ring-1 focus:!ring-blue-500 !transition-all"
-                      countrySelectorStyleProps={{
-                        buttonClassName: "!rounded-l-xl !border-y !border-l !border-slate-200 !bg-slate-50 !px-3 !h-[42px] !transition-all hover:!bg-slate-100",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label htmlFor="message" className="text-sm font-medium text-slate-900">Message</label>
-                  <div className="relative">
-                    <textarea
-                      id="message"
-                      rows={4}
-                      required
-                      minLength={MIN_MESSAGE}
-                      maxLength={MAX_CHARS}
-                      placeholder="Tell us about your project, goals, or requirements..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 pb-8 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none transition-all duration-200 disabled:cursor-not-allowed"
-                    />
-                    <div className={cn(
-                      "absolute bottom-2.5 right-3 text-[10px] font-medium transition-colors duration-200 pointer-events-none",
-                      formData.message.length >= 500 ? "text-orange-500" : "text-slate-400"
-                    )}>
-                      {formData.message.length} / {MAX_CHARS}
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-1">
+                      <label htmlFor="firstName" className="text-sm font-medium text-slate-900">First Name</label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        placeholder="John"
+                        required
+                        maxLength={60}
+                        autoComplete="given-name"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label htmlFor="lastName" className="text-sm font-medium text-slate-900">Last Name</label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        placeholder="Doe"
+                        maxLength={60}
+                        autoComplete="family-name"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
+                      />
                     </div>
                   </div>
-                </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  aria-busy={isSubmitting}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-blue-600 disabled:cursor-not-allowed disabled:bg-blue-400"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-                      Sending...
-                    </>
-                  ) : (
-                    "Send Message"
-                  )}
-                </button>
+                  <div className="space-y-1">
+                    <label htmlFor="email" className="text-sm font-medium text-slate-900">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="hello@example.com"
+                      required
+                      maxLength={254}
+                      autoComplete="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label htmlFor="phoneNumber" className="text-sm font-medium text-slate-900">Phone Number</label>
+                    <div className="phone-input-wrapper">
+                      <PhoneInput
+                        defaultCountry="in"
+                        value={formData.phoneNumber}
+                        onChange={(phone) => setFormData({ ...formData, phoneNumber: phone })}
+                        disabled={isSubmitting}
+                        className="w-full"
+                        inputClassName="!w-full !h-[42px] !rounded-r-xl !border-y !border-r !border-slate-200 !bg-slate-50 !px-4 !py-2.5 !text-sm focus:!border-blue-500 focus:!outline-none focus:!ring-1 focus:!ring-blue-500 !transition-all"
+                        countrySelectorStyleProps={{
+                          buttonClassName: "!rounded-l-xl !border-y !border-l !border-slate-200 !bg-slate-50 !px-3 !h-[42px] !transition-all hover:!bg-slate-100",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label htmlFor="message" className="text-sm font-medium text-slate-900">Message</label>
+                    <div className="relative">
+                      <textarea
+                        id="message"
+                        rows={4}
+                        required
+                        minLength={MIN_MESSAGE}
+                        maxLength={MAX_CHARS}
+                        placeholder="Tell us about your project, goals, or requirements..."
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 pb-8 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none transition-all duration-200 disabled:cursor-not-allowed"
+                      />
+                      <div className={cn(
+                        "absolute bottom-2.5 right-3 text-[10px] font-medium transition-colors duration-200 pointer-events-none",
+                        formData.message.length >= 500 ? "text-orange-500" : "text-slate-400"
+                      )}>
+                        {formData.message.length} / {MAX_CHARS}
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    aria-busy={isSubmitting}
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-blue-600 disabled:cursor-not-allowed disabled:bg-blue-400"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message"
+                    )}
+                  </button>
                 </fieldset>
               </form>
             </div>

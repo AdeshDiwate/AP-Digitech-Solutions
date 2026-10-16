@@ -15,23 +15,23 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://www.raveblue.in";
-const SITE_NAME = "Raveblue";
-const SITE_TITLE = "Raveblue | Custom Software & Digital Solutions";
+const SITE_URL = "https://www.apdigitechsolutions.in";
+const SITE_NAME = "AP Digitech Solutions";
+const SITE_TITLE = "AP Digitech Solutions | Custom Software & Digital Solutions";
 const SITE_DESCRIPTION =
-  "Raveblue builds modern websites, scalable software systems, AI-powered solutions, and end-to-end digital experiences for ambitious businesses.";
+  "AP Digitech Solutions builds modern websites, scalable software systems, AI-powered solutions, and end-to-end digital experiences for ambitious businesses.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | Raveblue",
+    template: "%s | AP Digitech Solutions",
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   generator: "Next.js",
   keywords: [
-    "Raveblue",
+    "AP Digitech Solutions",
     "Custom Software Development",
     "Website Development",
     "AI Solutions",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     "Web Development Agency",
     "Product Engineering",
   ],
-  authors: [{ name: "Raveblue", url: SITE_URL }],
-  creator: "Raveblue",
-  publisher: "Raveblue",
+  authors: [{ name: "AP Digitech Solutions", url: SITE_URL }],
+  creator: "AP Digitech Solutions",
+  publisher: "AP Digitech Solutions",
   category: "Technology",
   referrer: "origin-when-cross-origin",
   formatDetection: {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Raveblue — Custom Software & Digital Solutions",
+        alt: "AP Digitech Solutions — Custom Software & Digital Solutions",
         type: "image/jpeg",
       },
     ],
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
-    creator: "@raveblue",
+    creator: "@APDigitechSolutions",
   },
   robots: {
     index: true,
@@ -113,25 +113,25 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
-  legalName: "Raveblue",
+  legalName: "AP Digitech Solutions",
   url: SITE_URL,
-  logo: `${SITE_URL}/raveblue-logo.jpg`,
+  logo: `${SITE_URL}/Raveblue-logo.jpg`,
   image: `${SITE_URL}/og-image.jpg`,
   description:
-    "Raveblue is a custom software and digital solutions company building websites, AI-powered products, and scalable digital systems for modern businesses.",
+    "AP Digitech Solutions is a custom software and digital solutions company building websites, AI-powered products, and scalable digital systems for modern businesses.",
   foundingDate: "2024",
   slogan: "Engineering ambitious digital products.",
   sameAs: [
-    "https://www.linkedin.com/company/raveblue",
+    "https://www.linkedin.com/company/apdigitechsolutions",
 
   ],
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: "hr@raveblue.in",
+      email: "hr@apdigitechsolutions.in",
       url: `${SITE_URL}/#contact`,
-      availableLanguage: ["English", "Hindi","Marathi"],
+      availableLanguage: ["English", "Hindi", "Marathi"],
     },
   ],
 };
@@ -145,7 +145,7 @@ const websiteJsonLd = {
   publisher: {
     "@type": "Organization",
     name: SITE_NAME,
-    logo: `${SITE_URL}/raveblue-logo.jpg`,
+    logo: `${SITE_URL}/Raveblue-logo.jpg`,
   },
 };
 

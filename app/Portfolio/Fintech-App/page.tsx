@@ -56,7 +56,7 @@ const WeCareFinservApp = () => {
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-slate-900">WeCare Finserv — Case Study</h2>
               <p className="text-slate-500 leading-relaxed text-sm">
-                A comprehensive FinTech case study by Raveblue — designing and engineering a dual-platform ecosystem featuring a public-facing insurance & loan landing page paired with a powerful internal Admin CRM dashboard. The project covers end-to-end UX research, design system creation, and high-fidelity prototyping for both consumer and administrative experiences.
+                A comprehensive FinTech case study by AP Digitech Solutions — designing and engineering a dual-platform ecosystem featuring a public-facing insurance & loan landing page paired with a powerful internal Admin CRM dashboard. The project covers end-to-end UX research, design system creation, and high-fidelity prototyping for both consumer and administrative experiences.
               </p>
             </div>
 
@@ -70,8 +70,8 @@ const WeCareFinservApp = () => {
               <div className="space-y-4 pt-4 border-t border-slate-100">
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Project URL</p>
-                  <a href="https://raveblue.in/Portfolio/Fintech-App" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 font-medium break-all flex items-center gap-1 hover:underline">
-                    https://raveblue.in/Portfolio/Fintech-App <FiExternalLink />
+                  <a href="https://apdigitechsolutions.in/Portfolio/Fintech-App" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 font-medium break-all flex items-center gap-1 hover:underline">
+                    https://apdigitechsolutions.in/Portfolio/Fintech-App <FiExternalLink />
                   </a>
                 </div>
                 <div>

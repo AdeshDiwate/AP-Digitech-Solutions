@@ -90,8 +90,8 @@ const Logo = () => (
     className="relative z-20 flex items-center"
   >
     <img
-      src="/raveblue-logo.png"
-      alt="Raveblue"
+      src="/Raveblue-logo.png"
+      alt="AP Digitech Solutions"
       className="h-8 sm:h-9 w-auto"
     />
   </Link>
