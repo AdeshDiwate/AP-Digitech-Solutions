@@ -32,7 +32,7 @@ export default function Navbar() {
         <Logo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton 
+          <NavbarButton
             href="/#contact"
             variant="gradient"
             className="rounded-full px-6"
@@ -52,10 +52,10 @@ export default function Navbar() {
           />
         </MobileNavHeader>
 
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            className="mt-4"
-          >
+        <MobileNavMenu
+          isOpen={isMobileMenuOpen}
+          className="mt-4"
+        >
           <div className="flex flex-col gap-4">
             {navItems.map((item, idx) => (
               <a
@@ -87,12 +87,12 @@ export default function Navbar() {
 const Logo = () => (
   <Link
     href="/"
-    className="relative z-20 flex items-center"
+    className="relative z-20 flex items-center justify-center"
   >
     <img
-      src="/Raveblue-logo.png"
+      src="/favicon.jpg"
       alt="AP Digitech Solutions"
-      className="h-8 sm:h-9 w-auto"
+      className="h-9 w-9 rounded-xl object-cover shadow-sm"
     />
   </Link>
 );
